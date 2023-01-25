@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 
 
 
@@ -14,23 +14,8 @@ function App() {
 
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>SocialFeed</th>
-          </tr>
-        </thead>
-        <tbody>
-          {posts.map((post) =>{
-            return (
-              <tr>
-                <td>{post.name}</td>
-                <td>{post.comment}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <DisplayPosts parentPosts={posts} />
+
     </div>
   );
 }
