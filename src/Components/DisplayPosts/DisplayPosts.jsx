@@ -1,4 +1,4 @@
-
+import Post from "../Post/Post";
 
 
 const DisplayPosts = (props) => {
@@ -10,6 +10,7 @@ const DisplayPosts = (props) => {
               <tr>
                 <td>{post.name}</td>
                 <td>{post.comment}</td>
+                <Post post={post} />
               </tr>
             );
           })}
