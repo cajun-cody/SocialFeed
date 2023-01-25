@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
+
+
+
+/* Created App function to show a table in the browser with hard coded instanceof. 
+Used a constant to hold the posts of the user.
+*/
 function App() {
+
+  const [posts, setPosts] = useState([
+    {name: 'Cody', comment: 'Hi There!'}
+  ])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>SocialFeed</th>
+          </tr>
+        </thead>
+        <tbody>
+          {posts.map((post) =>{
+            return (
+              <tr>
+                <td>{post.name}</td>
+                <td>{post.comment}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
