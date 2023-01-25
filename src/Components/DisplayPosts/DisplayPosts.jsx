@@ -4,11 +4,6 @@
 const DisplayPosts = (props) => {
     return ( 
         <table>
-        <thead>
-          <tr>
-            <th>SocialFeed</th>
-          </tr>
-        </thead>
         <tbody>
           {props.parentPosts.map((post) =>{
             return (

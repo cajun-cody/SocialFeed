@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
+import NavBar from './Components/NavBar/NavBar';
+
 
 
 /* Created App function to show a table in the browser with hard coded instanceof. 
@@ -19,6 +21,7 @@ function App() {
 
   return (
     <div>
+      <NavBar/>
       <DisplayPosts parentPosts={posts} />
       <CreatePostForm addNewPostProp={addNewPost}/>
     </div>
