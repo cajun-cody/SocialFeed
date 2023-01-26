@@ -22,8 +22,9 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <DisplayPosts parentPosts={posts} />
       <CreatePostForm addNewPostProp={addNewPost}/>
+      <DisplayPosts parentPosts={posts} />
+
     </div>
   );
 }

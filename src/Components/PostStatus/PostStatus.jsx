@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import './PostStatus.css';
 
 
-
-const Post = (props) => {
+const PostStatus = (props) => {
     const [userlike, setLike] = useState(false);
     const [userdislike, setDislike] = useState(false);
-    
+   
+    /* Both functions below use if statements as boolean to set both states as false until they are clicked or unclicked. */
     function liked(){
         if(userlike){
             setLike(false)
@@ -30,9 +31,11 @@ const Post = (props) => {
 
     return ( 
         <table>
-            <div>
-                <div className='state-button'>
+            <div className='status-buttons'>
+                <div className='approval-button'>
                     <button className={[userlike ? 'like': null, ''].join('')} type='submit' onClick={liked}>Like</button>
+                </div>
+                <div className='disapproval-button'>
                     <button className={[userdislike ? 'dislike': null, ''].join('')} type='submit' onClick={dislike}>Dislike</button>
                 </div>
             </div>
@@ -40,5 +43,5 @@ const Post = (props) => {
      );
 }
  
-export default Post;
+export default PostStatus;
 
