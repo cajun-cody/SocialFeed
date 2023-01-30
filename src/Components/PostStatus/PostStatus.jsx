@@ -30,16 +30,17 @@ const PostStatus = (props) => {
     }
 
     return ( 
-        <table>
-            <div className='status-buttons'>
-                <div className='approval-button'>
-                    <button className={[userlike ? 'like': null, ''].join('')} type='submit' onClick={liked}>Like</button>
-                </div>
-                <div className='disapproval-button'>
-                    <button className={[userdislike ? 'dislike': null, ''].join('')} type='submit' onClick={dislike}>Dislike</button>
-                </div>
-            </div>
-        </table>
+        
+            <span className='status-buttons-1'>
+                
+                <button className={[userlike ? 'like': null, ''].join('')} type='submit' onClick={liked}>Like</button>
+        <span class='button_right'>
+           <button  className={[userdislike ? 'dislike': null, ''].join('')} type='submit' onClick={dislike}>Dislike</button> 
+        </span>
+                
+                
+            </span>
+       
      );
 }
  

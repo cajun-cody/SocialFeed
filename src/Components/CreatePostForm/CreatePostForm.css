@@ -1,0 +1,26 @@
+
+.form-1{
+    display: grid;
+  
+
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-name{
+    font-weight: bold;
+}
+
+.create-button{
+    position: relative;
+    width: fit-content;
+    margin-top: 1em;
+}
+
+.btn{
+    color: white;
+    background-color: green;
+}

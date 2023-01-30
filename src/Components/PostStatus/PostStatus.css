@@ -1,8 +1,18 @@
 
+
+
+.status-buttons-1{
+    padding: .5em;
+}
+
+
 .like{
     background-color: green;
 }
 
 .dislike{
     background-color: red;
+}
+.button_right{
+    padding-left: 20px;
 }
